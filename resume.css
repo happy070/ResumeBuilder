@@ -1,0 +1,22 @@
+body{
+    background-color: #E6E6FA;
+    font-family: cursive;
+    padding: 10px;
+}
+pre{
+    font-family: cursive;
+}
+#cv-template{
+    display: none;
+}
+.myimg{
+    border-radius: 50%;
+    width: 160px;
+    border: 2px solid black;
+}
+.background{
+    background-color: rgb(165, 105, 221);
+}
+#btngenerator{
+    border-radius: 20px;
+}

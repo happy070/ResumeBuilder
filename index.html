@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="resume.css">
+</head>
+
+<body>
+    <!-- here goes html code -->
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Resume Builder</h1>
+        <h5 class="text-center">
+            <pre>           - "HappyCodes"</pre>
+        </h5>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Personal infomation</h1>
+                    <div class="form-group mt-2">
+                        <label for="nameField">Your Name</label>
+                        <input type="text" id="nameField" placeholder="enter here" class="form-control" />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="contactField">Your Contact</label>
+                        <input type="text" id="contactField" placeholder="enter here" class="form-control" />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="addressField">Your Address</label>
+                        <textarea type="text" id="addressField" rows="3" placeholder="enter here"
+                            class="form-control"></textarea>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="">select your photo</label>
+                        <input id='imgField' type="file" class="form-control">
+                    </div>
+                    <p class="text-secondary  my-3">Important Links!!!</p>
+                    <div class="form-group mt-2">
+                        <label for="fbField">FaceBook</label>
+                        <input type="text" id="fbField" placeholder="enter here" class="form-control" />
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="igField">Instagram</label>
+                        <input type="text" id="igField" placeholder="enter here" class="form-control" />
+                    </div>
+                    <div class="form-group mt-2 mb-5">
+                        <label for="linkField">Linkdin</label>
+                        <input type="text" id="linkField" placeholder="enter here" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h1>Professional infomation</h1>
+
+                    <div class="form-group mt-2">
+                        <label for=" ">Objective</label>
+                        <textarea id="objectiveField" rows="5" placeholder="enter here" class="form-control"></textarea>
+                    </div>
+
+                    <div class="form-group mt-2" id="we">
+                        <label for=" ">Work Experience </label>
+                        <textarea placeholder="enter here" class="form-control weField"></textarea>
+
+                        <div class="container text-center mt-2 " id="weAddButton">
+                            <button onclick="addWork()" class="btn btn-outline-primary btn-sm ">Add more</button>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group mt-2" id="aq">
+                        <label for=" ">Academic Qualification</label>
+                        <textarea placeholder="enter here" class="form-control eqField"></textarea>
+
+                        <div class="container text-center mt-2" id="aqAddButton">
+                            <button onclick="addAQ()" class="btn btn-outline-primary btn-sm ">Add more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="btn btn-outline-primary btn-sm ">Generate CV</button>
+        </div>
+    </div>
+
+    <!-- cv template -->
+
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <!-- first-column -->
+                <img src="https://imgs.search.brave.com/MVkxgCvk9BbBt-8q9QfuBPtpsGBnO21SeZG2AAd2Vnc/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9vcGVu/Y2xpcGFydC5vcmcv/aW1hZ2UvMjQwMHB4/L3N2Z190b19wbmcv/MjQ3MzE5L2Fic3Ry/YWN0LXVzZXItZmxh/dC0zLnBuZw"
+                    alt="" class="img-fluid myimg" id="img-template" />
+                <div class="container">
+                    <p id="nameT">Himanshu joshi</p>
+                    <p id="contactT">mob: +91 9870801469,+91 6297986723</p>
+                    <p id="addressT">ma girja vihar phase 5B kamalwaganja haldwani</p>
+                    <hr />
+                    <p>
+                        <a id="fbT" href="#">http://www.facebook.com</a>
+                    </p>
+                    <p>
+                        <a id="igT" href="#">http://www.instagram.com</a>
+                    </p>
+                    <p>
+                        <a id="linkT" href="#">http://www.linkdin.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8 py-3">
+                <!-- second template  -->
+                <h1 id="nameT2" class="text-center font-weight=800px ">Himanshu joshi</h1>
+                <!-- objective card -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias consequatur
+                            explicabo velit exercitationem, vitae, aliquam magnam doloribus perferendis officia
+                            reprehenderit fugiat id dolore ratione et ea vel in expedita molestias.</p>
+                    </div>
+                </div>
+                <!-- work Experience -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, assumenda.</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, assumenda.</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, assumenda.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Acadmic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, assumenda.</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, assumenda.</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, assumenda.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container text-center mt-4">
+                    <button onclick="printCV()" id="btngenerator" class="background">Print CV</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="resume.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
